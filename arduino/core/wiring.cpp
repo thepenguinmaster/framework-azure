@@ -53,6 +53,15 @@ unsigned int millis(void)
 		(gettime_now.tv_nsec - app_start_time.tv_nsec) / 1000000);	
 }
 
+
+unsigned int micros(void)
+{
+	struct timespec gettime_now;
+	clock_gettime(CLOCK_MONOTONIC, &gettime_now);
+	return ((gettime_now.tv_sec - app_start_time.tv_sec) +
+		(gettime_now.tv_nsec - app_start_time.tv_nsec) / 1000000);	
+}
+
 unsigned int seconds(void)
 {
 	return millis() / 1000;

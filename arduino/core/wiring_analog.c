@@ -27,4 +27,7 @@ void analogWrite(uint8_t pin, int val) {}
 
 void analogClose(uint8_t pin) {}
 
-void analogOpen(uint8_t pin, /* val, src, div */...) {}
+void analogOpen(uint8_t pin, /* val, src, div */...) {
+
+  
+}
